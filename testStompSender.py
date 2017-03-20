@@ -4,18 +4,20 @@ char_name = "FuseCharacter"
 stompSender = StompSender()
 stompSender.init_network()
 str_text = "hi, my name is "
-msg = "<bml><speech>" + str_text + "</speech>"
+msg = "<speech>" + str_text + "</speech>"
 msg_xml = stompSender.add_xml(msg)
-
-stompSender.send_BML(char_name, msg_xml)
 print("sending: " + msg_xml)
-time.sleep(2)
-# cmd = ""
-# stompSender.send_SB(char_name, cmd)
-# print("sending: " + cmd)
-# time.sleep(2)
-stompSender.finit_network()
+stompSender.send_BML(char_name, msg_xml)
 
+time.sleep(2)
+
+cmd = "character.getSkeleton().getJointByName(\"Neck\").setPostrotation(SrQuat(-3, -0.0004, -0.0, -0.0));"
+print("sending: " + cmd)
+stompSender.send_SB(cmd)
+
+time.sleep(2)
+
+stompSender.finit_network()
 
 # to test, run
 # c:\Python27\Scripts>..\python.exe stomp
