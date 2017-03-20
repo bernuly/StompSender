@@ -1,6 +1,6 @@
-# READ ME for StompSender class
-The StompSender class allows to send control messages to SmartBody via activeMQ (using the STOMP protocol).<br/>
-The class assumes default port and password of the activeMQ server.
+# README for StompSender class
+The StompSender class allows to send control messages to SmartBody via ActiveMQ (using the STOMP protocol).<br/>
+The class assumes default port and password of the ActiveMQ server.
 
 ## Installation
 The StompSender requires the stomp.py library (https://github.com/jasonrbriggs/stomp.py). <br/>
