@@ -40,5 +40,5 @@ class StompSender():
 
     def send_msg(self, prefix, msg):
         msg = prefix + " " + urllib.quote_plus(msg)
-        print(msg)
+        #print(msg)
         self.conn.send(body=msg, headers=self.headers, destination='/topic/DEFAULT_SCOPE')
